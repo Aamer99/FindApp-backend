@@ -1,0 +1,127 @@
+
+GET http://localhost:4000/user 
+###
+GET http://localhost:4000/user/11184153
+###
+POST http://192.168.1.22:4000/user/login
+Content-Type: application/json 
+
+{
+   "email":"kh",
+   "password":"123"
+}
+
+### 
+
+POST http://192.168.1.21:4000/user/verifyToken 
+Content-Type: application/json 
+
+{
+   "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjpbeyJpZCI6MjU3MjEzNCwibmFtZSI6Ik5hd2FsIGhhbWVkICIsImVtYWlsIjoibmF3YWxAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkQ2QzVkE5Z2ZoT21hazBUODIxb25zZXkwZG9VbGhZeWtNbHFPUFZIV2cxZVd4Rnp1VW1aNmUiLCJjaXR5IjoiTWFkaW5hIiwiaW1hZ2VQcm9maWxlIjpudWxsLCJwcm9maWxlTGFuZ3VhZ2UiOm51bGx9XSwiaWF0IjoxNjU5NDUxNDAwLCJleHAiOjE2NTk0NTE1ODB9.2Wb1n7BezMs-BLcwg0Rq3TlIA9EbrOQEq7SlTPrBDRI"
+}
+
+### 
+POST http://localhost:4000/user/signup
+Content-Type: application/json
+
+ {
+    "name":"Aamer Essa ",
+    "email":"aamer.es12@gmail.com",
+    "password":"123",
+    "city":"Medina",
+    "imageProfile":null,
+    "profileLanguage":"English"
+ }
+
+####
+POST http://localhost:4000/user/updateProfile/876987
+Content-Type: application/json
+
+{
+ "name":"aamer Essa ",
+    "email":"aamer.es12@gmail.com",
+    "password":"123",
+    "city":"Medina",
+    "imageProfile":null,
+    "profileLanguage":"English"  
+}
+
+ 
+
+
+### 
+GET http://172.20.10.6:4000/coffe 
+ 
+### 
+
+
+GET http://192.168.0.146:4000/user/getOneByEmail/AAmer.es12@gmail.com
+
+###
+
+POST http://localhost:4000/user/authUser/aamer.es12@gmail.com
+
+
+####
+GET http://172.20.10.6:4000/coffe/search/kifa
+
+####
+
+GET http://192.168.1.21:4000/restaurant/90890650
+
+####
+
+GET http://192.168.8.10:4000/restaurant/search/kfc
+
+####
+
+POST http://172.20.10.6:4000/user/addFavoritResturent/112122
+Content-Type: application/json
+
+{
+   "placeID":"112122"
+}
+
+#### 
+
+GET http://localhost:4000/restaurant/favoritplaces/7986680
+
+
+#### 
+
+POST http://192.168.1.22:4000/place/addPlace 
+Content-Type: application/json
+
+{
+      "name":"KFC",
+      "logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/KFC_Logo.svg/640px-KFC_Logo.svg.png",
+      "mnue": "https://www.restaurantmenuprice.com/wp-content/uploads/2022/04/kfc_menu_042522_01_buckets_01.jpg",
+      "city": "Madina",
+      "type":"Restaurant",
+      "PlaceLocation":"24.470901,39.612236",
+      "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/KFC_Logo.svg/640px-KFC_Logo.svg.png"
+      
+}
+
+####
+
+POST  http://localhost:4000/place
+Content-Type: application/json
+
+{
+         "city": "Medina",
+          "type": "Restaurant"
+}
+###
+GET http://192.168.1.22:4000/place/testPythone
+###
+GET  http://192.168.0.145:4000/place/Categories/Rice
+
+####
+POST http://192.168.1.22:4000/place/search/Yy
+Content-Type: application/json 
+
+{
+         "userCity": "Madina",
+          "placeType": "Restaurant"
+}
